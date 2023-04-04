@@ -25,6 +25,12 @@ body {
   display: flex;
 }
 
+.filter-btn {
+  background-color: var(--color-white);
+  z-index: 999999;
+  display: none;
+}
+
 /*======================================*/
 /*======= ESTILOS PARA FILTRADO ========*/
 /*======================================*/
@@ -82,9 +88,22 @@ body {
   text-transform: capitalize;
 }
 
-.filter__group-checkbox input {
+.filter.hide {
+  left: -350px;
 }
 
+.filter-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
 /*======================================*/
 /*===== FIN ESTILOS PARA FILTRADO ======*/
 /*======================================*/
@@ -164,6 +183,38 @@ body {
 .product__price {
   font-weight: 900;
   color: var(--color-black);
+}
+
+@media (max-width: 1270px) {
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 970px) {
+  .filter-btn {
+    display: block;
+  }
+
+  .filter {
+    width: 18.75rem;
+  }
+
+  .products {
+    margin: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .products__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 440px) {
+  .products__grid {
+    justify-content: center;
+  }
 }
 /*======================================*/
 /*==== FIN ESTILOS PARA PRODUCTOS ======*/

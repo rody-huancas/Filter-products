@@ -33,7 +33,6 @@ function filtrar_todo() {
     var nombre = $("#txtnombre").val();
     var precio = $("#txtprecio").val();
 
-    console.log(precio);
     $.ajax({
         url: "./controller/producto.php?op=listar",
         method: "POST",

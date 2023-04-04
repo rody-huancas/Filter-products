@@ -8,7 +8,7 @@
     <title>Filter Products</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo BASE ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE ?>assets/css/style.css?v=<?php echo rand(); ?>">
 
     <!-- Bootstrap - libreria slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-slider@10.6.2/dist/css/bootstrap-slider.min.css" />
@@ -16,6 +16,13 @@
 
 <body>
     <main class="main">
+
+        <button id="show-filter-btn" class="filter-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M16 18V20H5V18H16ZM21 11V13H3V11H21ZM19 4V6H8V4H19Z" fill="#000"></path>
+            </svg>
+        </button>
+
         <!-- Filtrar -->
         <div class="filter">
             <span class="filter__title">Filtrar</span>
@@ -50,15 +57,12 @@
         </div>
     </main>
 
-
-
-
-
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <!-- Bootstrap - libreria slider -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-slider@10.6.2/dist/bootstrap-slider.min.js"></script>
-    <script src="<?php echo BASE ?>view/home/main.js"></script>
+    <script src="<?php echo BASE ?>view/home/main.js?v=<?php echo rand(); ?>"></script>
+    <script src="<?php echo BASE ?>assets/js/app.js?v=<?php echo rand(); ?>"></script>
 </body>
 
 </html>
