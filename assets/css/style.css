@@ -11,6 +11,7 @@
   --bg-filter: #606a86;
 
   --color-white: #fff;
+  --color-black: #000;
 
   --font-open: "Open Sans", sans-serif;
 }
@@ -24,6 +25,9 @@ body {
   display: flex;
 }
 
+/*======================================*/
+/*======= ESTILOS PARA FILTRADO ========*/
+/*======================================*/
 .filter {
   width: 21.875rem;
   height: 100vh;
@@ -31,14 +35,59 @@ body {
   padding: 1.25rem;
   box-shadow: 10px 0px 5px -5px rgba(96, 106, 134, 0.2);
   position: fixed;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--bg-fondo);
 }
 
 .filter__title {
   text-transform: uppercase;
   font-size: 2rem;
-  color: var(--bg-fondo);
   font-weight: 900;
 }
+
+.filter__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+  border-top: 0.125rem solid var(--bg-fondo);
+  padding: 1rem;
+}
+
+.filter__subtitle {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.filter__input {
+  width: 100%;
+  padding: 0.625rem 0.625rem;
+  border: none;
+  outline: none;
+  border-radius: 0.625rem;
+  font-size: 0.9rem;
+}
+
+.filter__cat {
+  margin-top: 0.7rem;
+}
+
+.filter__group-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.filter__group-checkbox input {
+}
+
+/*======================================*/
+/*===== FIN ESTILOS PARA FILTRADO ======*/
+/*======================================*/
 
 /*======================================*/
 /*====== ESTILOS PARA PRODUCTOS ========*/
@@ -78,6 +127,11 @@ body {
 .product__img {
   width: 80%;
   height: 70%;
+  transition: all 0.5s ease;
+}
+
+.product__card:hover .product__img {
+  transform: scale(1.1);
 }
 
 .product__group {
@@ -87,6 +141,29 @@ body {
   flex-direction: column;
   padding: 0.625rem;
   margin-top: 1.25rem;
+  color: var(--bg-filter);
+}
+
+.product__title {
+  text-align: center;
+  font-weight: 900;
+}
+
+.product-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.product__category {
+  font-weight: 600;
+}
+
+.product__price {
+  font-weight: 900;
+  color: var(--color-black);
 }
 /*======================================*/
 /*==== FIN ESTILOS PARA PRODUCTOS ======*/
